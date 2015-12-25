@@ -51,7 +51,36 @@
 </node>
 <node CREATED="1451036693458" ID="ID_1298640210" MODIFIED="1451036700772" TEXT="&#x91cd;&#x8981;&#x6570;&#x636e;&#x7ed3;&#x6784;">
 <node CREATED="1451036700772" ID="ID_1456670018" MODIFIED="1451036855294" TEXT="file_operations fops">
-<node CREATED="1451037049842" ID="ID_934679588" MODIFIED="1451037060786" TEXT="struct module *owner"/>
+<node CREATED="1451037049842" ID="ID_934679588" MODIFIED="1451037538194" TEXT="struct module *owner&#x7528;&#x6765;&#x5728;&#x5b83;&#x7684;&#x64cd;&#x4f5c;&#x8fd8;&#x5728;&#x88ab;&#x4f7f;&#x7528;&#x65f6;&#x963b;&#x6b62;&#x5378;&#x8f7d; THIS_MODULE &lt;linux/module.h&gt;"/>
+<node CREATED="1451037538371" ID="ID_155075103" MODIFIED="1451037600853" TEXT="loff_t (*lseek)(struct file *,loff_t int);">
+<node CREATED="1451037600854" ID="ID_1678582966" MODIFIED="1451037643841" TEXT="&#x6539;&#x53d8;&#x6587;&#x4ef6;&#x4e2d;&#x8bfb;&#x5199;&#x4f4d;&#x7f6e; &#x8fd4;&#x56de;&#x65b0;&#x4f4d;&#x7f6e;"/>
+<node CREATED="1451037644467" ID="ID_253964915" MODIFIED="1451037713987" TEXT="long offset"/>
+</node>
+<node CREATED="1451037732679" ID="ID_1330041247" MODIFIED="1451037766889" TEXT="ssize_t (*read)(struct file *,char __user *,size_t,loff_t*)">
+<node CREATED="1451037766890" ID="ID_571188745" MODIFIED="1451037784292" TEXT="&#x7528;&#x6765;&#x4ece;&#x8bbe;&#x5907;&#x4e2d;&#x83b7;&#x53d6;&#x6570;&#x636e;"/>
+<node CREATED="1451037784963" ID="ID_815649344" MODIFIED="1451037808832" TEXT="&#x8fd4;&#x56de;&#x8bfb;&#x53d6;&#x5b57;&#x8282;&#x6570; signed size&#x672c;&#x5730;&#x6574;&#x6570;&#x7c7b;&#x578b;"/>
+</node>
+<node CREATED="1451037809987" ID="ID_51784451" MODIFIED="1451037847072" TEXT="ssize_t (*aio_read)(struct kiocb *,char __user *,size_t ,loff_t);">
+<node CREATED="1451037876947" ID="ID_1913455061" MODIFIED="1451037884336" TEXT="&#x521d;&#x59cb;&#x5316;&#x5f02;&#x6b65;&#x8bfb;"/>
+<node CREATED="1451037885315" ID="ID_922216350" MODIFIED="1451037904263" TEXT="&#x4e3a;NULL &#x5219;read&#x540c;&#x6b65;&#x8bfb;"/>
+</node>
+<node CREATED="1451037905237" ID="ID_1483859229" MODIFIED="1451037975304" TEXT="ssize_t (*write)(struct file *,const char __user*,size_t,loff_t *);">
+<node CREATED="1451037977411" ID="ID_1203467837" MODIFIED="1451037995442" TEXT="&#x53d1;&#x9001;&#x6570;&#x636e;&#x8bbe;&#x5907;"/>
+<node CREATED="1451037996035" ID="ID_854486273" MODIFIED="1451038004264" TEXT="&#x8fd4;&#x56de;&#x5199;&#x7684;&#x5b57;&#x8282;&#x6570;"/>
+</node>
+<node CREATED="1451038012358" FOLDED="true" ID="ID_455641041" MODIFIED="1451038096806" TEXT="ssize_t (*aio_write)(struct kiocb *,const char __user *,size_t,loff_t *);">
+<node CREATED="1451038060748" ID="ID_207480369" MODIFIED="1451038082983" TEXT="&#x521d;&#x59cb;&#x5316;&#x5f02;&#x6b65;&#x5199;"/>
+</node>
+<node CREATED="1451038097989" ID="ID_1774156409" MODIFIED="1451038151481" TEXT="int (*readdir)(struct file *,void *,filldir_t);">
+<node CREATED="1451038151483" ID="ID_909618747" MODIFIED="1451038183960" TEXT="&#x8bfb;&#x53d6;&#x76ee;&#x5f55; &#x4ec5;&#x5bf9;&#x6587;&#x4ef6;&#x7cfb;&#x7edf;"/>
+</node>
+<node CREATED="1451038184740" ID="ID_310142136" MODIFIED="1451038214018" TEXT="unsigned int (*poll)(struct file *,struct poll_table_struct *);">
+<node CREATED="1451038283030" ID="ID_1678283319" MODIFIED="1451038309073" TEXT="poll epoll select&#x67e5;&#x8be2;&#x5bf9;&#x4e00;&#x4e2a;&#x6216;&#x591a;&#x4e2a;&#x6587;&#x4ef6;&#x662f;&#x5426;&#x4f1a;&#x963b;&#x585e;"/>
+<node CREATED="1451038309588" ID="ID_416584856" MODIFIED="1451038340130" TEXT="&#x8fd4;&#x56de;&#x4e00;&#x4e2a;&#x53ea;&#x662f;&#x975e;&#x963b;&#x585e;&#x8bfb;&#x5199;&#x53ef;&#x80fd;&#x7684;&#x4f4d;&#x63a9;&#x7801;"/>
+<node CREATED="1451038340709" ID="ID_845363080" MODIFIED="1451038407700" TEXT="&#x63d0;&#x4f9b;&#x7ed9;&#x5185;&#x6838;&#x4fe1;&#x606f;&#x8c03;&#x7528;&#x8fdb;&#x7a0b;&#x76f4;&#x5230;&#xff29;/&#xff2f;&#x53ef;&#x80fd; poll&#x4e3a;&#xff2e;&#xff35;&#xff2c;&#xff2c;&#x5219;&#x5047;&#x5b9a;&#x4e0d;&#x963b;&#x585e;&#x7684;&#x53ef;&#x8bfb;&#x53ef;&#x5199;"/>
+</node>
+<node CREATED="1451038411719" ID="ID_585444121" MODIFIED="1451038540744" TEXT="int (*ioctl)(struct inode *,struct file *,unsigned int ,unsigned long);"/>
+<node CREATED="1451038541300" ID="ID_1408807553" MODIFIED="1451038575123" TEXT="int (*mmap)(struct file *,struct vm_area_struct *);"/>
 </node>
 </node>
 </node>
